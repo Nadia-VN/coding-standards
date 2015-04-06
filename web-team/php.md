@@ -9,9 +9,9 @@
 2. [File format](#file-format)
 3. [Indentation](#indentation)
 3. [Open & close tag](#open-and-close-tag)
-4. [Class, interface] (#class,-interface)
-5. [Method, function] (#method,-function)
-6. [Variable, property] (#variable,-property)
+4. [Class, interface] (#class-interface)
+5. [Method, function] (#method-function)
+6. [Variable, property] (#variable-property)
 7. [Constant] (#constant)
 8. [Conditional and loop] (#conditional-and-loop)
 9. [Boolean and NULL] (#boolean-and-NULL)
@@ -73,25 +73,25 @@ Với bất kì một file php nào mà chỉ chứa code php, thì ko cần clo
 * Tên phải ngắn gọn dễ hiểu, nêu rõ mục đích của class
 * Dấu { ở cùng dòng với khai báo class
 
-```php
-			// CORRECT
-			class AdminHomeController extends BaseController {
+	```php
+	// CORRECT
+	class AdminHomeController extends BaseController {
 
-    			…….
+	…….
 
-			}
-			
-			// INCORRECT
-			class Admin_homeController 
-			{
-			…
-			}
-			
-			class Adminhomecontroller 
-			s{
-			..
-			}
-```
+	}
+		
+	// INCORRECT
+	class Admin_homeController 
+	{
+	…
+	}
+		
+	class Adminhomecontroller 
+	s{
+	..
+	}
+	```
 			
 #### Method, function
 
@@ -99,42 +99,42 @@ Với bất kì một file php nào mà chỉ chứa code php, thì ko cần clo
 * Tên ngắn gọn dễ hiểu, nói rõ mục đích của method
 * Dấu { không cùng dòng với khai báo class
 
-```php
-			// CORRECT
-			function getAdminUsers($number = NULL) 
-			{
-			   …
-			}
-			
-			// INCORRECT
-			function get_Amin_users() {
-			}
-```
+	```php
+	// CORRECT
+	function getAdminUsers($number = NULL) 
+	{
+	   …
+	}
+		
+	// INCORRECT
+	function get_Amin_users() {
+	}
+	```
 
 #### Variable, property
 
 * Tương tự như đặt tên method và function
 * Các tên biến gồm 1 kí tự như $i, $j chỉ dùng trong vòng lặp for. Còn lại tên biến cần rõ ràng, thể hiện rõ chức năng
 
-```php
-			// CORRECT
-			$password
-			$accessTtoken
-				
-			// INCORRECT
-			$Password
-			$access_Token
-			$access_token
-```	
+	```php
+	// CORRECT
+	$password
+	$accessTtoken
+		
+	// INCORRECT
+	$Password
+	$access_Token
+	$access_token
+	```	
 				
 #### Constant
 
 Viết hoa tất cả các ký tự, nếu gồm nhiều từ thì cách các từ bằng kí tự "_"
 
 ```php
-			// CORRECT
-			define('MY_CONSTANT', 'MY_CONSTANT');
-			echo MY_CONSTANT;
+// CORRECT
+define('MY_CONSTANT', 'MY_CONSTANT');
+echo MY_CONSTANT;
 ```
 
 #### Conditional and loop
@@ -142,27 +142,27 @@ Viết hoa tất cả các ký tự, nếu gồm nhiều từ thì cách các t�
 Với tất cả các vòng lặp và điều kiện thì dấu { phải ở 1 dòng riêng
 
 ```php
-			// CORRECT
-			if ($test > 0)
-			{
-			  ...
-			}
-			else 
-			{
-			  ...
-			}
-			
-			// CORRECT
-			for ($i = 0; $i < rows.length; i++)
-			{
-			 …
-			}
-			
-			// CORRECT
-			foreach ($arr as $key => $val)
-			{
-			…
-			}			
+// CORRECT
+if ($test > 0)
+{
+  ...
+}
+else 
+{
+  ...
+}
+	
+// CORRECT
+for ($i = 0; $i < rows.length; i++)
+{
+ …
+}
+	
+// CORRECT
+foreach ($arr as $key => $val)
+{
+…
+}			
 
 ```
 		
@@ -170,64 +170,64 @@ Với tất cả các vòng lặp và điều kiện thì dấu { phải ở 1 d
 Luôn viết ở dạng thường các kí tự này:
 
 ```php
-		true
-		false
-		null
+true
+false
+null
 ```
 		
 #### Space and brackets
 Không có dấu cách giữa nội dung bên trong của dấu và các dấu này
 
 ```php
-		// CORRECT
-		$arr['abc']
-		if ($isValid)
-		
-		// INCORRECT
-		$arr[ 'abc' ]
-		if ( $isValid )
+// CORRECT
+$arr['abc']
+if ($isValid)
+	
+// INCORRECT
+$arr[ 'abc' ]
+if ( $isValid )
 ```
 		
 #### Comment
 Comment theo [DocBlock](http://phpdoc.org/docs/latest/index.html) style. 1 số ví dụ:
 
 ```php
-			/**
-	 		* UserController Class
-	 		* 
-	 		* @package	Package Name
-	 		* @subpackage	Subpackage
-	 		* @category	Category
-	 		* @author	Linh Tran
-	 		* @link	
-	 		*/
-			class User_Controller extends Base_Controller 
-			{
-			...
-			}
+/**
+* UserController Class
+* 
+* @package	Package Name
+* @subpackage	Subpackage
+* @category	Category
+* @author	Linh Tran
+* @link	
+*/
+class User_Controller extends Base_Controller 
+{
+...
+}
 
-				
-			/**
-	 		* Decode json string to array
-	 		*
-	 		* @access	public
-	 		* @param	string
-	 		* @return	Array
-	 		*/
-			function jsonDecode($str)
-			{
-			…
-			}
-			
-			/**
-			* @var property to define user data
-			*/
-			protected $userData;
-			
-			/**
-			* Constant to define timezone
-			*/
-			define('DEFAULT_TIMEZONE', 'Asia/Bangkok')
+	
+/**
+* Decode json string to array
+*
+* @access	public
+* @param	string
+* @return	Array
+*/
+function jsonDecode($str)
+{
+…
+}
+	
+/**
+* @var property to define user data
+*/
+protected $userData;
+	
+/**
+* Constant to define timezone
+*/
+define('DEFAULT_TIMEZONE', 'Asia/Bangkok')
 
 ```				
 		
@@ -247,50 +247,50 @@ Comment theo [DocBlock](http://phpdoc.org/docs/latest/index.html) style. 1 số 
 **Class**
 
 ```php
-		class SampleClass
-	    	extends FooAbstract
-	    	implements BarInterface {
-		}
+class SampleClass
+    extends FooAbstract
+    implements BarInterface {
+}
 ```
 
 **Function**
 
 ```php
-		public function bar($arg1, $arg2, $arg3,
-	        $arg4, $arg5, $arg6)
-	    {
-	        // all contents of function
-	        // must be indented four spaces
-	    }
+public function bar($arg1, $arg2, $arg3,
+   $arg4, $arg5, $arg6)
+{
+   // all contents of function
+   // must be indented four spaces
+}
 ```
     
 **String**
 
 ```php		
-		$sql = "SELECT `id`, `name` FROM `people` "
-	     	. "WHERE `name` = 'Susan' "
-	     	. "ORDER BY `name` ASC ";
+$sql = "SELECT `id`, `name` FROM `people` "
+	. "WHERE `name` = 'Susan' "
+	. "ORDER BY `name` ASC ";
 ```
 	     
 **Array**
 
 ```php
-		// Normal Array
-		$sampleArray = array(1, 2, 3, 'Zend', 'Studio',
-	                     	$a, $b, $c,
-	                     	56.44, $d, 500);
-	    // Associative array                 
-	    $sampleArray = array(
-	    	'first_key'  => 'firstValue',
-	    	'second_key' => 'secondValue',
-		);
+// Normal Array
+$sampleArray = array(1, 2, 3, 'Zend', 'Studio',
+                	$a, $b, $c,
+                	56.44, $d, 500);
+// Associative array                 
+$sampleArray = array(
+'first_key'  => 'firstValue',
+'second_key' => 'secondValue',
+);
 ```
 		
 **Chained function call**
 
 ```php
-		$users = Users::where('id', 10)->whereIn('status', array(1,3)
-			->select('users.*)->orderBy('created_at');
+$users = Users::where('id', 10)->whereIn('status', array(1,3)
+	->select('users.*)->orderBy('created_at');
 ```
 	
 ### Laravel
