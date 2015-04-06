@@ -37,13 +37,16 @@
 	* Nếu file đấy chứa 1 class hoặc interface thì viết hoa ký tự đầu. ví dụ: UserValidator.php
 	* Còn lại các trường hợp khác thì không viết hoa ký tự đầu. ví dụ: userProfile.blade.php, configDatabase.php
 
+**[⬆ back to top](#table-of-contents)**
 #### File Format 
 
 Luôn save file với encoding utf-8
-	
+
+**[⬆ back to top](#table-of-contents)**	
 #### Indentation
 Phải sử dụng space (thay cho tab) và mặc định là 4 spaces (có thể setup trong settings của text editor)
 
+**[⬆ back to top](#table-of-contents)**
 #### Open and close tag
 Với bất kì một file php nào mà chỉ chứa code php, thì ko cần close the php tag '?>' và không được có space trước open tag
 
@@ -66,7 +69,8 @@ Với bất kì một file php nào mà chỉ chứa code php, thì ko cần clo
 		php_info();
 	// End of file, don't close the php tag
 ```
-				
+
+**[⬆ back to top](#table-of-contents)**				
 #### Class, Interface
 * Chỉ một class cho 1 file php
 * Sử dụng Camel Case, các từ viết liền, viết hoa kí tự đầu của các từ trong tên của class ví dụ:  **AdminController**
@@ -92,7 +96,8 @@ Với bất kì một file php nào mà chỉ chứa code php, thì ko cần clo
 	..
 	}
 	```
-			
+
+**[⬆ back to top](#table-of-contents)**			
 #### Method, function
 
 * Camel Case, viết liền, ko viết hoa kí tự đầu của từ đầu tiền, các từ sau thì kí tự đầu viết hoa ví dụ: **getUserProfile**
@@ -111,6 +116,7 @@ Với bất kì một file php nào mà chỉ chứa code php, thì ko cần clo
 	}
 	```
 
+**[⬆ back to top](#table-of-contents)**
 #### Variable, property
 
 * Tương tự như đặt tên method và function
@@ -126,7 +132,8 @@ Với bất kì một file php nào mà chỉ chứa code php, thì ko cần clo
 	$access_Token
 	$access_token
 	```	
-				
+
+**[⬆ back to top](#table-of-contents)**				
 #### Constant
 
 Viết hoa tất cả các ký tự, nếu gồm nhiều từ thì cách các từ bằng kí tự "_"
@@ -137,6 +144,7 @@ define('MY_CONSTANT', 'MY_CONSTANT');
 echo MY_CONSTANT;
 ```
 
+**[⬆ back to top](#table-of-contents)**
 #### Conditional and loop
 
 Với tất cả các vòng lặp và điều kiện thì dấu { phải ở 1 dòng riêng
@@ -165,7 +173,8 @@ foreach ($arr as $key => $val)
 }			
 
 ```
-		
+
+**[⬆ back to top](#table-of-contents)**	
 #### Boolean and NULL
 Luôn viết ở dạng thường các kí tự này:
 
@@ -174,7 +183,8 @@ true
 false
 null
 ```
-		
+
+**[⬆ back to top](#table-of-contents)**
 #### Space and brackets
 Không có dấu cách giữa nội dung bên trong của dấu và các dấu này
 
@@ -187,7 +197,8 @@ if ($isValid)
 $arr[ 'abc' ]
 if ( $isValid )
 ```
-		
+
+**[⬆ back to top](#table-of-contents)**
 #### Comment
 Comment theo [DocBlock](http://phpdoc.org/docs/latest/index.html) style. 1 số ví dụ:
 
@@ -239,7 +250,8 @@ define('DEFAULT_TIMEZONE', 'Asia/Bangkok')
 			$password = Input::get('password')
 			$hash = Hash::make($password)
 ```
-		
+
+**[⬆ back to top](#table-of-contents)**	
 #### Overlength code
 * Số lượng character trong 1 dòng nên <= 80
 * Khi vượt quá thì nên xuống dòng và xử lý như trong các trường hợp sau
@@ -307,6 +319,8 @@ Trong 1 application cần phân biệt rõ giữa Model, View, Controller
 * Controller: Chức năng kết nối giữa Model và View, xử lý Input, lấy dữ liệu từ Model cho View
 * View: **View ko được chứa code logic**. View chỉ dùng đễ thể hiện các dữ liệu mà controller đã trả về cho View. 
   * Nên sử dụng Blade template của Laravel để có thể có được sự phân tách rõ ràng hơn giữa View và Controller <http://laravel.com/docs/views/templating> 
+ 
+**[⬆ back to top](#table-of-contents)** 
   
 #### Security
 * Luôn lấy input thông qua hàm của Laravel: Input::get('…') tránh lấy trực tiếp từ $_GET, $_POST vì Laravel sẽ xử lý input tránh XSS, SQL injection
@@ -314,7 +328,8 @@ Trong 1 application cần phân biệt rõ giữa Model, View, Controller
   * Ví dụ như lấy hash password (không cần giải mã)thì dùng Hash::make('…')
   * Các trường hợp cần giải mã thì dùng Crypter::encrypt('..')
   * Tránh dùng md5 vì nó không bảo mật, dễ bị phá
-  
+ 
+**[⬆ back to top](#table-of-contents)**  
 #### Composer
 * Laravel > 4 sử dụng [Composer](http://getcomposer.org/) để quản lý các 3rd packages sử dụng cho application của mình. Có thể tìm các packages này ở trang [https://packagist.org/](https://packagist.org/)
 * Có thể chỉnh sửa các thiết lập composer cũng như add thêm các thư mục để application autoload ở trong file ```composer.json``` trong thư mục gốc 
