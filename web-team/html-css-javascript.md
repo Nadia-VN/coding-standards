@@ -40,5 +40,5 @@
 
 ### [Coding Standards](#)
 ***
-1. **Đối với PHP, CSS, HTML, Javascript, cài đặt "tab space"(tabstop) cho editor là 2**
+1. **Đối với CSS, HTML, Javascript, cài đặt "tab space"(tabstop) cho editor là 2**
 2. To be continued..
